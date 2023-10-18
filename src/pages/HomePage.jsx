@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../components/Banner'
 import styled from 'styled-components'
+import Navbar from '../components/Navbar'
 
 const Section = styled.div`
     position: relative;
@@ -15,11 +16,20 @@ const Section = styled.div`
     }
 `
 
+const Container1 = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`
+
 const HomePage = () => {
   return (
     <>
     <Section>
-    <Banner/>
+      <Container1>
+        <Banner/>
+        <Navbar/>
+      </Container1>
         
     </Section>
     </>
