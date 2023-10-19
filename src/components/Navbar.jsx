@@ -12,7 +12,7 @@ const Section = styled.div`
 
 const Container = styled.div`
     position: relative;
-    width: 1000px;
+    width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
