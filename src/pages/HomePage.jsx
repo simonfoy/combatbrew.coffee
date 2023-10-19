@@ -10,10 +10,6 @@ const Section = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @media only screen and (max-width: 940px) {
-        min-height: auto;
-    }
 `
 
 const Container1 = styled.div`
@@ -25,15 +21,22 @@ const Container1 = styled.div`
 const Container2 = styled.div`
     display: flex;
     flex-direction: row;
-    width: 1250px;
-    padding-top: 75px;
+    width: 100%;
+    max-width: 1500px;
+    padding-top: 100px;
+    
+    @media only screen and (max-width: 1000px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 40px;
+    }
 `
 
 const LeftContent = styled.div`
     flex: 1;
     padding: 20px;
     text-align: center;
-`;
+`
 
 const Title = styled.h2`
     margin-top: 0;
@@ -43,20 +46,20 @@ const Title = styled.h2`
     text-transform: uppercase;
     color: #00704A;
     padding-bottom: 1px;
-`;
+`
 
 const StepTitle = styled.h3`
     color: #333;
     font-weight: 600;
     margin-bottom: 5px;
     font-size: 19px;
-`;
+`
 
 const StepDescription = styled.p`
     color: #777;
     margin-bottom: 20px;
     font-size: 14px;
-`;
+`
 
 const OrderButton = styled.button`
     background-color: #00704A;
@@ -72,19 +75,29 @@ const OrderButton = styled.button`
     &:hover {
         background-color: #005c3a;
     }
-`;
+`
 
 const ProductImageContainer = styled.div`
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-`;
+
+    @media only screen and (max-width: 1000px) {
+        padding-bottom: 40px;
+    }
+`
 
 const ProductImage = styled.img`
-    max-width: 125%;
+    width: 100%;
+    max-width: 700px;
     height: auto;
-`;
+
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      height: 250px;
+    }
+`
 
 const Container3 = styled.div`
     display: flex;
