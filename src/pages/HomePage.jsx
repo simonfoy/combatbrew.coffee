@@ -3,6 +3,7 @@ import Banner from '../components/Banner'
 import styled from 'styled-components'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import ProductCard from '../components/ProductCard'
 
 const Section = styled.div`
     position: relative;
@@ -26,7 +27,7 @@ const Container2 = styled.div`
     padding-top: 100px;
     
     @media only screen and (max-width: 1000px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         padding-top: 40px;
     }
@@ -103,7 +104,20 @@ const Container3 = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    width: 1155px;
 `
+
+const ProductsGrid = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 70px 0;
+
+    @media only screen and (max-width: 1000px) {
+        flex-direction: row;
+    }
+`;
 
 const HomePage = () => {
   return (
@@ -114,6 +128,12 @@ const HomePage = () => {
           <Navbar/>
         </Container1>
         <Container2>
+    
+          
+          <ProductImageContainer>
+            <ProductImage src="https://orderdevs.com/cdn/shop/files/BUILD-A-BOX-MOCK_small_9f24f492-8094-43d7-8324-7a82c3ba10c2.png?v=1680721560&width=750" alt="Combatbrew Coffee Products" />
+          </ProductImageContainer>
+
           <LeftContent>
             <Title>ENLIST IN THE COFFEE BRIGADE</Title>
 
@@ -132,14 +152,16 @@ const HomePage = () => {
             <OrderButton>Deploy Coffee</OrderButton>
 
           </LeftContent>
-          
-          <ProductImageContainer>
-            <ProductImage src="https://orderdevs.com/cdn/shop/files/BUILD-A-BOX-MOCK_small_9f24f492-8094-43d7-8324-7a82c3ba10c2.png?v=1680721560&width=750" alt="Combatbrew Coffee Products" />
-          </ProductImageContainer>
         </Container2>
         <Container3>
-          {/* <Footer/> */}
-        </Container3>
+  <ProductsGrid>
+    <ProductCard imgSrc="path_to_product1_image.jpg" title="Product 1" price="10.99" />
+    <ProductCard imgSrc="path_to_product2_image.jpg" title="Product 2" price="12.99" />
+    <ProductCard imgSrc="path_to_product3_image.jpg" title="Product 3" price="15.99" />
+    <ProductCard imgSrc="path_to_product4_image.jpg" title="Product 4" price="9.99" />
+  </ProductsGrid>
+  {/* <Footer/> */}
+</Container3>
       </Section>
     </>
   )
